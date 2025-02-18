@@ -68,7 +68,7 @@ The graph below shows the AC analysis Data of the deisgn :
      current .
    * M1 has influenced on Id , Means its width affects the output current .
   # DESIGN - 2
-  ![WhatsApp Image 2025-02-17 at 15 03 20_b3dba982](https://github.com/user-attachments/assets/8db5d795-8dda-4e4b-b719-0ec36154e2be)
+  ![image](https://github.com/user-attachments/assets/add2aed4-a355-41ac-8a38-d584d3ad0616)
    Aim : To find DC operating point , find its gain using transient analysis and AC analysis.
    Components : Mosfet(M! and M@) , DC power supply .
   Procedure :
