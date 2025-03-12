@@ -191,9 +191,175 @@ A Differential Amplifier is an funadamental electronic circuit designed to ampli
   </table>
 - Simulation
   
- ![Image](https://github.com/user-attachments/assets/2cc56e65-1255-42f5-8fa3-2e9352151be6)
+ ![WhatsApp Image 2025-03-09 at 00 21 23_6c2f6d5c](https://github.com/user-attachments/assets/cceec6b9-44fa-4f8a-8594-ccac206e1eaf)
+
 - From the graph the gain is 13.180 dB
-- The 3 dB bandwidth will be 19.433 GHz 
+- The 3 dB bandwidth will be 19.433 GHz
+
+# CIRCUIT 2 - [**WITH CURRENT SOURCE**]
+
+![WhatsApp Image 2025-03-09 at 00 50 53_2f3aa407](https://github.com/user-attachments/assets/b768414b-2572-44da-9e0c-5c5c142d94f4)
+
+For the same design value 
+
+**A**] DC ANALYSIS
+
+![WhatsApp Image 2025-03-09 at 00 52 40_12d3b6ba](https://github.com/user-attachments/assets/2688d7a4-da97-4739-a3a2-a88769948bef)
+
+**B**] TRANSIENT ANALYSIS
+
+![WhatsApp Image 2025-03-09 at 00 55 13_99e31b9e](https://github.com/user-attachments/assets/35b9397f-1c2f-421b-8e20-1af11b6cba26)
+
+- A<sub>vdm</sub> = 452.87mV/100mV
+     <table>
+     <td>A<sub>vdm</sub> = 4.528V/V</td>
+     </table>
+
+**3**] AC ANALYSIS
+
+![WhatsApp Image 2025-03-09 at 11 43 31_774a873a](https://github.com/user-attachments/assets/cf5ad73b-5449-460a-bd9f-8774684c802b)
+
+-  From the graph the gain is 13.180 dB
+- The 3 dB bandwidth will be 19.433 GHz
+
+# CIRCUIT-3 [**WITH MOSFET**]
+
+![WhatsApp Image 2025-03-09 at 11 44 18_fb51455b](https://github.com/user-attachments/assets/d19c36c6-be12-4415-8944-974850b37c1b)
+
+
+
+- In this circuit we need to desing the Basing Voltage V<sub>b</sub>.
+- For MOSFET 3 to operate in the saturation region.
+   - V<sub>GD</sub> <= V<sub>th</sub>
+   - V<sub>G</sub> - V<sub>D</sub> = V<sub>th</sub>
+   - V<sub>b</sub> = V<sub>th</sub> + V<sub>p</sub>
+   - V<sub>b</sub> = 0.366 + 0.5
+     <table>
+      <td>V<sub>b</sub> = 0.866V </td>
+    </table> 
+    - from this we can coclude that MOSFET M3 is in saturation region which it can act has constant current source 
+    - When we perform DC analysis to check the parameters values we got :-
+
+    ![WhatsApp Image 2025-03-09 at 11 44 32_2bbb3f9c](https://github.com/user-attachments/assets/408f6069-c9ca-4d0e-a344-78174430e4be)
+
+  Next in order to find the gain we perform transient analysis we got as below :-
+
+  ![WhatsApp Image 2025-03-09 at 11 46 03_7bc8070e](https://github.com/user-attachments/assets/a2bce1ed-e9be-47b0-9609-18d346fa62b9)
+
+  **AC Analysis**
+- We have obtained gain from above analysis i.e 4.54V/V
+- contvert to dB scale = 20log(A<sub>vdm</sub>)
+- dB = 20log(4.54)
+<table>
+  <td>dB value is 13.14dB</td>
+</table>
+  - lets verify this with the graph
+  
+ ![WhatsApp Image 2025-03-09 at 11 49 26_84d08d63](https://github.com/user-attachments/assets/55a0d690-1db5-4575-9d8c-e3aea016f790)
+
+  3dB will be 12.76dB
+  3dB bandwidth will be 21.56 GHz
+
+    ## Result
+
+**Comparision based on the obtained Values**
+  
+  <table>
+    <tr>
+      <td>Parameters</td>
+      <td> Calculated</td>
+      <td>Circuit 1 (with R<sub>ss</sub>)</td>
+      <td>Circuit 2 (with constant current source)</td>
+      <td>Circuit 3 (with NMOS)</td>
+      <td>Observation</td>
+    </tr>
+    <tr>
+      <td>V<sub>icm</sub></td>
+      <td>1.3V</td>
+      <td> 1.3V</td>
+      <td>1.3V</td>
+      <td>1.3V</td>
+      <td>As per the design </td>
+    </tr>
+    <tr>
+      <td>V<sub>ocm</sub></td>
+      <td> 1.4V</td>
+      <td>1.4V</td>
+       <td>1.402V</td>
+        <td>1.4V</td>
+        <td><p>Its as per the simulation , if we want to raise  the V<sub>ocm</sub> then  we need to decrease R<sub>D</sub> or I<sub>D</sub> , if we need to decrease the V<sub>ocm</sub> then either we need to **increase R<sub>D</sub> or I<sub>D</sub></p></td>
+    </tr>
+    <tr>
+      <td>V<sub>p</sub></td>
+      <td>0.5V</td>
+      <td>0.5V</td>
+      <td>0.501V</td>
+      <td>0.50V</td>
+      <td><p>It's Nodal  Voltage </p></td>
+    </tr>
+    <tr>
+      <td>I<sub>D</sub></td>
+      <td>0.6mA</td>
+      <td>0.601mA</td>
+      <td>0.6mA</td>
+      <td>0.601mA</td>
+      <td>If I<sub>D</sub> has to be incresed then we need to increase the width of the MOSFET and vice-versa.
+      </td>
+    </tr>
+    <tr>
+      <td>I<sub>ss</sub></td>
+      <td>1.2mA</td>
+      <td>1.202mA</td>
+      <td>1.2mA</td>
+      <td>1.202mA</td>
+      <td>It's the total current flowing in the differential amplifier and its also called as <em>Tail Current</em></td>
+    </tr>
+    <tr>
+      <td>R<sub>D</sub>
+      <td>1.83KΩ</td>
+      <td>1.83kΩ</td>
+      <td>1.83KΩ</td>
+      <td>1.83kΩ</td>
+      <td>AS we need to set the V<sub>ocm</sub> as per that the R<sub>D</sub> values has Changed.</td>
+    </tr>
+    <tr>
+      <td>g<sub>m</sub></td>
+      <td>2.77mS</td>
+      <td>2.47mS</td>
+      <td>2.47mS</td>
+      <td>3.3551mS</td>
+      <td><p>From calculation the g<sub>m</sub>has been decreased due to differ in the V<sub>th</sub> value.The g<sub>m</sub> value has been increased due to decrease in the V<sub>ov</sub></p></td>
+    </tr>
+    <tr>
+      <td>A<sub>vdm</td>
+        <td>-4.99V/V</td>
+        <td>-4.528 V/V</td>
+        <td> -4.528 V/V</td>
+        <td> -4.528 V/V</td>
+        <td><p>Value extracted from the graph </p></td>
+    </tr>
+        <tr>
+          <td>Gain in dB scale(20log(A<sub>vdm</sub>) </td>
+          <td>13.96dB</td>
+          <td>13.18dB</td>
+          <td>13.18dB</td>
+          <td>15.76dB</td>
+          <td>We can see variation because the gain has been increased</td>
+        </tr>
+        <tr>
+          <td>Bandwidth</td>
+          <td>-</td>
+          <td>19.433GHz</td>
+          <td>19.433GHz</td>
+          <td>21.56GHz</td>
+          <td><p> When compare to Resistor and constant current source the Mosfet Bandwidth has been increased because the MOSFET's high input impedance it reduces the loading effect, allowing for a wider range of frequencies to get amplified without any signal distortion. </p></td>
+        </tr>
+         </table>
+
+
+
+
+
 
   
 
