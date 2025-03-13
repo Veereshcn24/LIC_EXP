@@ -5,11 +5,10 @@ It is the basic configuration of the MOSFET(Metal oxide semiconductor field effe
 
 # Design Question
 Design differential amplifier for the following specifications
-____
-|Parameters |Vdd| P | Vicm | Vocm | Vp |
-| ------------- | ------------- |
-|Secifications| 2.5V| <=3MW | 1.3V| 1.4V | 0.5V|
-____
+
+ Vdd= 2.5V , P=<=3MW ,  Vicm= 1.3V , Vocm=1.4V  , Vp=0.5V .
+ 
+
 
 
 
@@ -193,10 +192,15 @@ A Differential Amplifier is an funadamental electronic circuit designed to ampli
   
  ![WhatsApp Image 2025-03-09 at 00 21 23_6c2f6d5c](https://github.com/user-attachments/assets/cceec6b9-44fa-4f8a-8594-ccac206e1eaf)
 
-- From the graph the gain is 13.180 dB
-- The 3 dB bandwidth will be 19.433 GHz
+- From the graph the gain is 13.250 dB
+- The 3 dB bandwidth will be 18.437 GHz
 
 # CIRCUIT 2 - [**WITH CURRENT SOURCE**]
+
+**Why These Changes We need to Made**
+Introducing AC input signals allows us to study the amplifier’s dynamic response, including gain, bandwidth, and frequency behavior.
+Using a current source (I1) instead of a resistor (R3) provides a more stable and controlled source current, reducing dependence on transistor parameters and improving matching and common-mode rejection.
+Setting the AC magnitude of the input sources ensures that we can measure the amplifier's small-signal behavior for AC analysis.
 
 ![WhatsApp Image 2025-03-09 at 00 50 53_2f3aa407](https://github.com/user-attachments/assets/b768414b-2572-44da-9e0c-5c5c142d94f4)
 
@@ -257,8 +261,8 @@ For the same design value
   
  ![WhatsApp Image 2025-03-09 at 11 49 26_84d08d63](https://github.com/user-attachments/assets/55a0d690-1db5-4575-9d8c-e3aea016f790)
 
-  3dB will be 12.76dB
-  3dB bandwidth will be 21.56 GHz
+  3dB will be 10.76dB
+  3dB bandwidth will be 18.45 GHz
 
     ## Result
 
@@ -351,10 +355,22 @@ For the same design value
           <td>-</td>
           <td>19.433GHz</td>
           <td>19.433GHz</td>
-          <td>21.56GHz</td>
+          <td>18.45GHz</td>
           <td><p> When compare to Resistor and constant current source the Mosfet Bandwidth has been increased because the MOSFET's high input impedance it reduces the loading effect, allowing for a wider range of frequencies to get amplified without any signal distortion. </p></td>
         </tr>
          </table>
+
+**INFERENCE**
+
+| **Configuration**       | **Gain**                | **CMRR**                | **Bias Stability**  | **Complexity** |
+|--------------------------|-------------------------|-------------------------|---------------------|----------------|
+| Source Resistor          | Moderate                | Moderate                | Voltage-dependent   | Low            |
+| Ideal Current Source     | High                    | Very High               | Excellent           | Moderate       |
+| MOSFET Current Source    | High (slightly < ideal) | High (slightly < ideal) | Good                | Moderate       |
+
+- **Source Resistor**: Simple but limited by finite impedance and bias variability.
+- **Current Source**: Optimal for gain and CMRR but impractical without additional components.
+- **MOSFET**: A practical compromise with high performance and manageable complexity.
 
 
 
