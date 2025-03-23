@@ -1,11 +1,11 @@
-#  **Current mirror circuit** 
+ # Current mirror circuit
 
-***Introduction***
+## **Introduction**
 <p>
 A current mirror is a circuit designed to copy a current through one active device by controlling the current in another active device of a circuit, keeping the output current constant regardless of loading. Current mirrors are widely used in analog integrated circuits, such as operational amplifiers, to provide biasing and active loads. They are essential in ensuring that the current in one part of the circuit is accurately replicated in another part, which is crucial for maintaining the stability and performance of the circuit.Current mirrors are one of the most fundamental and widely used circuits in analog electronics. They are essential components in integrated circuits (ICs) and are used in a variety of applications, including biasing, active loads, and signal processing. The primary function of a current mirror is to replicate or "mirror" a reference current from one part of the circuit to another, ensuring that the output current remains constant regardless of variations in load or other external factors.
 </p>
 
-***Theory***
+## **Theory**
 <p>
 The basic idea behind a current mirror is to use a reference current to generate a mirrored current. The most common implementation uses two transistors, where the base-emitter voltage of the first transistor sets the base-emitter voltage of the second transistor, thereby controlling the current through the second transistor.
 </p>
@@ -49,7 +49,9 @@ If we take ratio of two equations, we get,
 
 <p>
 
-<tb>**CIRCUIT DIAGRAM**</tb>
+## **CIRCUIT DIAGRAM**
+
+
 
 ![Screenshot 2025-03-23 222948](https://github.com/user-attachments/assets/12b06952-06ae-4754-809e-7613e6705bd2)
 
@@ -74,7 +76,7 @@ I<sub>ref</sub>=I<sub>p</sub>=(I<sub>total</sub>)/2
 <td>I<sub>ref</sub>=I<sub>p</sub>=0.27mA</td>
 </table>
 
-### Simulation Outcones
+## Simulation Outcones
 
 This document presents the simulation results for the current mirror circuit with different L (length) values of MOSFETs. The simulation was conducted for three cases with varying L values.
 
@@ -128,29 +130,39 @@ This document presents the simulation results for the current mirror circuit wit
 - **Observation 1**: Width is kept at 180nm and length were M1:M2 = 2.38u:4.76u
 - **Observation 2**: W/L ratio of M1 and M2 transistors are maintained same i,e 1:2 .
 
+## Transient analysis 
+### SIMULATION OUTPUT
 
 
 
 
 
+![Screenshot 2025-03-24 020658](https://github.com/user-attachments/assets/a2c43cd8-6813-4cc8-abf4-eeddf8768689)
+
+- **Observation** MaxOutSwing =  1.175V<sub>p-p</sub> 
+## AC ANALYSIS
+### SIMULATION OUTPUT
 
 
+
+
+![Screenshot 2025-03-24 021536](https://github.com/user-attachments/assets/0eed4042-a21b-4a33-97ae-8d705ae847a0)
+
+
+- **Observation** BW = 2.122GHz 
 
 
 
 
   
-**ADVATAGES**
+## **ADVATAGES**
   <p>
 1] Does not become sensitive to PVT parameters .
 
  ![Screenshot 2025-03-24 002513](https://github.com/user-attachments/assets/3310f5dd-6f76-45e0-ace9-0c2b4ff571cc)
 
+ 2] Rejecting voltage biasing.
  
-  
-2] Rejecting voltage biasing.
- 
-
  # Results
 
 
