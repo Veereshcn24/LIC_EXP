@@ -182,16 +182,16 @@ This document presents the simulation results for the current mirror circuit wit
 - Ensuring MOSFETs operate in the saturation region (V_1 > V_th) is crucial for proper functioning of the current mirror.
 
 ## CIRCUIT DIAGRAM 2
-
-![image](https://github.com/user-attachments/assets/bb669dd8-209c-40eb-bc2c-f6492a03977b)
+![image](https://github.com/user-attachments/assets/7d2cbe1e-88d8-4500-aa88-74487d6b3bc2)
 
 ### DC ANALYSIS 
 
-![image](https://github.com/user-attachments/assets/6f13c12e-d704-45aa-ad75-3c15bfda74bd)
+![image](https://github.com/user-attachments/assets/ed562f99-b64b-44a9-b439-5413c8368bcc)
 
-- **Observation** We can observe that current accross M6 and M5 transistors are almost double because of 1:2 W/L ratio 
 
-- **Observation** We can observe that current accross M1 and M2 transistors are same because of 1:1 W/L ratio 
+- **Observation** We can observe that current accross M6 and M3 transistors are almost double because of 1:2 W/L ratio 
+
+- **Observation** We can observe that current accross M5 and M4 transistors are same because of 1:1 W/L ratio 
 
 ### TRANSIENT ANALYSIS 
 ![image](https://github.com/user-attachments/assets/1d0a2768-9e05-4260-9480-fb389647ef88)
