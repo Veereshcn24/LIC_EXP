@@ -204,8 +204,9 @@ i,e = 1.53/0.099 =15.45 v/v
 
 ### AC ANALYSIS 
 
-![image](https://github.com/user-attachments/assets/305f72b0-88ce-4961-887d-e8f8eca9a7c6)
-- **Observation** B<sub>w</sub>=313.Mhz
+![image](https://github.com/user-attachments/assets/c17724f5-842e-41b3-b787-99a0176e08f5)
+
+- **Observation** B<sub>w</sub>=1.94G<sub>Hz</sub>
 
 
 ## INFERENCE 
