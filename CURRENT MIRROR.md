@@ -49,7 +49,7 @@ If we take ratio of two equations, we get,
 
 <p>
 
-## **CIRCUIT DIAGRAM**
+## CIRCUIT DIAGRAM 1
 
 
 
@@ -180,6 +180,62 @@ This document presents the simulation results for the current mirror circuit wit
 - The special case with a W/L ratio of 1:2 shows that the current mirror can be adjusted for different mirroring ratios.
 - The total current (I_total) was calculated based on power supply and constraints, resulting in I_total = 0.55 mA, with I_ref and I_p each being 0.27 mA.
 - Ensuring MOSFETs operate in the saturation region (V_1 > V_th) is crucial for proper functioning of the current mirror.
+
+## CIRCUIT DIAGRAM 2
+
+![image](https://github.com/user-attachments/assets/bb669dd8-209c-40eb-bc2c-f6492a03977b)
+
+### DC ANALYSIS 
+
+![image](https://github.com/user-attachments/assets/6f13c12e-d704-45aa-ad75-3c15bfda74bd)
+
+- **Observation** We can observe that current accross M6 and M5 transistors are almost double because of 1:2 W/L ratio 
+
+- **Observation** We can observe that current accross M1 and M2 transistors are same because of 1:1 W/L ratio 
+
+### TRANSIENT ANALYSIS 
+![image](https://github.com/user-attachments/assets/1d0a2768-9e05-4260-9480-fb389647ef88)
+
+- **Observation** A<sub>v</sub>=Vout/V<sub>in</sub>
+- <p>
+i,e = 1.81 /0.198 = 9.14 v/v
+
+
+### AC ANALYSIS 
+
+![image](https://github.com/user-attachments/assets/305f72b0-88ce-4961-887d-e8f8eca9a7c6)
+- **Observation** B<sub>w</sub>=313.Mhz
+
+
+## INFERENCE 
+
+
+ ### Current Accuracy
+- **1:1 Ratio**: Higher accuracy owing to identical transistor sizes.
+- **1:2 Ratio**: Slight difference observed due to varying transistor widths.
+- **Inference**: The 1:1 ratio offers superior current matching.
+
+### Transistor Sizing
+- **1:1 Ratio**: Utilizes smaller transistors, thus requiring less chip area.
+- **1:2 Ratio**: Necessitates larger transistor widths, leading to increased area consumption.
+- **Inference**: The 1:1 ratio is more efficient in terms of chip area usage.
+
+### Output Resistance
+- **1:1 Ratio**: Exhibits higher output resistance, as a longer channel length (L) reduces lambda, thereby increasing r<sub>out</sub>.
+- **1:2 Ratio**: Shows slightly lower output resistance since larger transistor widths may introduce mismatch, slightly affecting lambda.
+- **Inference**: The 1:1 ratio provides better stability due to higher output resistance.
+
+### Power Consumption
+- **1:1 Ratio**: Consumes less power due to the use of smaller transistors.
+- **1:2 Ratio**: Consumes slightly more power because of the increased transistor sizes.
+- **Inference**: The 1:2 ratio results in higher power consumption due to larger devices.
+
+### Design Complexity
+- **1:1 Ratio**: Easier to implement and match.
+- **1:2 Ratio**: Requires precise selection of transistor width.
+- **Inference**: The 1:1 ratio is simpler to design and optimize.
+
+
 
 
 
