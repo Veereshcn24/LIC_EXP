@@ -194,11 +194,12 @@ This document presents the simulation results for the current mirror circuit wit
 - **Observation** We can observe that current accross M5 and M4 transistors are same because of 1:1 W/L ratio 
 
 ### TRANSIENT ANALYSIS 
-![image](https://github.com/user-attachments/assets/1d0a2768-9e05-4260-9480-fb389647ef88)
+![image](https://github.com/user-attachments/assets/e7c8540a-1c43-4fba-a4ab-9f1a69178629)
+
 
 - **Observation** A<sub>v</sub>=Vout/V<sub>in</sub>
 - <p>
-i,e = 1.81 /0.198 = 9.14 v/v
+i,e = 1.53/0.099 =15.45 v/v
 
 
 ### AC ANALYSIS 
